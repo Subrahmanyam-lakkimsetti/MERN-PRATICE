@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.text1 {
+  background-color: aliceblue;
+  height: 200px;
+  width: 200px;
+  padding: 25px;
+  border: 10px solid;
+}
+
+.text2 {
+  height: 200px;
+  width: 400px;
+  background-color: bisque;
+}
