@@ -334,3 +334,11 @@
 // console.log(Object.values(obj));
 // console.log(Object.entries(obj));
 // console.log(Object.keys(obj).length);
+
+//arrow function
+
+// const sum = () => {
+//   console.log(10 + 10);
+// };
+
+// sum();
