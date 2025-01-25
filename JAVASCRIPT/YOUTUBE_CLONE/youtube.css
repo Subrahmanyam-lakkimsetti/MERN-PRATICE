@@ -71,6 +71,19 @@ header {
   color: #ff0000;
 }
 
+.title {
+  padding-top: 20px;
+}
+
+.channel {
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+.description {
+  padding-top: 40px;
+}
+
 .search {
   display: flex;
   align-items: center;
