@@ -1,7 +1,6 @@
 const main_page1 = document.getElementsByClassName('main-section')[0];
 
 const showdata = (data) => {
-  console.log(data);
   for (let i = 0; i < data.length; i++) {
     const div = document.createElement('div');
     div.className = 'card';
@@ -29,6 +28,18 @@ const showdata = (data) => {
     const button1 = document.createElement('button');
     button1.className = 'card-button';
     button1.innerText = 'Add to cart';
+
+    button1.addEventListener('click', () => {
+      alert('Product added to the cart sucessfully....');
+    });
+
+    button1.addEventListener('mouseenter', () => {
+      console.log('Mouse Entered...');
+    });
+
+    button1.addEventListener('mouseleave', () => {
+      console.log('mouse leaved...');
+    });
 
     const div3 = document.createElement('div');
     div3.className = 'button-container';

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User details form</title>
+    <link rel="stylesheet" href="Form.css" />
+  </head>
+  <body>
+    <form class="basic-form" action="Thankyou.html" method="GET">
+      <h1>User details</h1>
+      <div>
+        <label for="username"
+          >Enter name
+          <input
+            class="input"
+            type="text"
+            id="username"
+            placeholder="Ex: john doe"
+            name="username"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="age"
+          >Enter age
+          <input
+            class="input"
+            type="number"
+            id="age"
+            placeholder="Ex:10"
+            name="userage"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="degree">Highest degree</label>
+        <select class="input">
+          <option value="10th">X</option>
+          <option value="Inter">XII</option>
+          <option value="B-tech">B-tech</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="marks">
+          Enter marks
+          <input
+            class="input"
+            name="usermarks"
+            type="number"
+            placeholder="ex: 540"
+            id="marks"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="licence">Do you have a licence?</label>
+        <div>
+          <input
+            type="radio"
+            id="licence-yes"
+            name="licence"
+            value="yes"
+            required
+          />
+          <label for="licence-yes">Yes</label>
+
+          <input
+            type="radio"
+            id="licence-no"
+            name="licence"
+            value="no"
+            required
+          />
+          <label for="licence-no">No</label>
+        </div>
+      </div>
+
+      <div id="licence_number">
+        <label for="licence_number"
+          >Enter licence NUmber
+          <input
+            class="input"
+            id="li-num"
+            type="text"
+            placeholder="XKFLKND744"
+            name="li-number"
+          />
+        </label>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <script src="Form.js"></script>
+  </body>
+</html>
