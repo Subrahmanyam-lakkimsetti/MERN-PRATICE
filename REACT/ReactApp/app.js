@@ -27,4 +27,4 @@ const App = () => {
   );
 };
 
-reactroot.render(App());
+reactroot.render(<App />);
