@@ -29,6 +29,7 @@ const Todoinput = ({ setdata, assignments }) => {
       description,
       date,
       assignment,
+      status: 'todo',
     };
 
     setdata((prev) => {
@@ -69,6 +70,7 @@ const Todoinput = ({ setdata, assignments }) => {
                 className="input"
                 value={name}
                 onChange={handletittle}
+                required
               ></input>
             </label>
 

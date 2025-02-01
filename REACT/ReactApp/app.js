@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import Form from './src/pages/Form';
-import ComponentMain from './src/pages/counterMain';
 import Theme from './src/pages/Theme';
 import Homepage from './src/pages/homepage';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import Aboutpage from './src/pages/AboutPage';
 import Dummyrecipies from './src/pages/Dummyrecipies';
 import Todoapp from './src/pages/TodoApp';
 
