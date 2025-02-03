@@ -12,4 +12,5 @@ async function datacall() {
   console.log(pr2);
 }
 
+
 datacall();
