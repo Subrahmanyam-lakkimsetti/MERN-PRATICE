@@ -1,11 +1,16 @@
+require('dotenv').config();
 // create a basic server first
+
 const express = require('express');
 const Task = require('./models/taskmodel.js');
 require('./config/dbconfig.js');
-const PORT = 3006;
+
+const cors = require('cors');
+const PORT = process.env.PORT || 2009;
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('<h1>Heelo welcome to web page</h1>');
@@ -91,10 +96,13 @@ app.patch('/tasks/:taskID', async (req, res) => {
     const { taskID } = req.params;
 
     // get the req data
-    const { id, assignment, ...reqData } = req.body; // id and the assignment not changable
+    const { _id, ...reqData } = req.body; // id and the not changable
 
     // update function to update the task
-    const data = await Task.findByIdAndUpdate(taskID, reqData);
+    const data = await Task.findByIdAndUpdate(taskID, reqData, {
+      returnDocument: 'after',
+      runValidators: true,
+    });
     if (data == null) {
       res.status(400).json({
         status: 'failure',
@@ -108,11 +116,18 @@ app.patch('/tasks/:taskID', async (req, res) => {
       data,
     });
   } catch (error) {
-    console.log('error in patch: ', error.message);
-    res.status(500).json({
-      status: 'failure',
-      message: 'Internal server error',
-    });
+    console.log('error in patch: ', error.name);
+    if (error.name === 'CastError') {
+      res.status(400).json({
+        status: 'failure',
+        message: 'Invalid parameter',
+      });
+    } else {
+      res.status(500).json({
+        status: 'failure',
+        message: 'Internal server error',
+      });
+    }
   }
 });
 
